@@ -1,0 +1,39 @@
+{
+  "name": "Testing auto-updater",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "release": "electron-builder -w -p 'onTagOrDraf'",
+    "build": "electron-builder -w"
+  },
+  "build": {
+    "appId": "com.evoleurt.abc",
+    "copyright": "Copyright 2020 Evoleurt Tech",
+    "publish": {
+      "provider": "github"
+    },
+    "win": {
+      "certificateFile": "private/evoleurttech.pfx",
+      "certificatePassword": "",
+      "publisherName": "evoleurt"
+    }
+  },
+  "repository": "https://github.com/bobbyoeng/testing-auto-update.git",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^7.1.9"
+  },
+  "dependencies": {
+    "electron-updater": "^4.2.0"
+  }
+}
